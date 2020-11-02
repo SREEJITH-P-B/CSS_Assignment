@@ -1,0 +1,109 @@
+ @font-face 
+ {
+    font-family:  'Josefin Sans', sans-serif;
+    src: url('fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+select[required]:focus{
+    outline: none;
+}
+
+select[required]{
+    display: block;
+    padding: 0;
+    position: absolute;
+    background: transparent;
+    color: transparent;
+    border: none;
+    top: 0;
+}
+	  
+	  
+.labelfont{
+  font-family:Josefin Sans;
+  
+}
+
+
+
+fieldset{
+  border-color:#008B8B;
+  border-style: solid;
+}
+
+  
+form
+	{
+	background-color:#F5F5F5;
+	color: #282C35
+	width:100%;
+	}
+
+
+.select-wrapper input.select-dropdown 
+	{
+		border-bottom: #008B8B;
+		width:42em;
+		position:relative;
+	}
+.select-wrapper .caret
+	{
+	position:relative;
+	right:22vw;
+	top:2vw;
+			
+	}
+			
+.select-wrapper input.select-dropdown:focus
+	{
+	border-bottom:1px solid  #008B8B;
+	border-bottom-color: #008B8B;
+	}
+	
+ul.dropdown-content.select-dropdown li span 
+{
+    color: #008B8B; 
+}
+
+
+
+input[type=text]:not(.browser-default):focus:not([readonly])
+ {
+	width:38em;
+    border-bottom: 1px solid  #008B8B;
+    box-shadow: 0 1px 0 0  #008B8B;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly])+label
+ {
+	width:38em;
+    color: #008B8B;
+}
+
+.checkbox-blue-grey[type="checkbox"].filled-in:checked + span:not(.lever):after 
+{
+border: 2px solid white;  
+background-color:  #008B8B;
+}
+
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after
+ {
+    background-color:  #008B8B;
+}
+
+[type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:before, [type="radio"].with-gap:checked+span:after
+   {
+    border: 2px solid  #008B8B;
+}
+
+#fname
+{
+	width:100%;display:inline-block;position:relative;
+}
+#lname
+{
+width:100%;display:inline-block;position:relative;left:0%;
+}

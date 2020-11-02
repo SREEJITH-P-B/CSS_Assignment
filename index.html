@@ -1,0 +1,151 @@
+  <html>
+  
+	<head>
+      <title>Signup</title>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">      
+      <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel = "stylesheet" href = "css/materialize.min.css">
+	  <link rel = "stylesheet" href = "css/main.css">
+	</head>
+	
+    <body> 
+		<br><br><br>   
+		<div class = "container" style="position:relative;" >
+			<fieldset> 
+				<form action="" method='post' onsubmit='displayMessage();'>
+					<div class="col s12"  style="padding-left:30px; padding-right:30px;><br><br>
+					<p style="font-size:1em;><b><center><h4><br>Volunteer Registration</b></h4></p></center><br><br>
+					
+					
+					<div class="row" >
+							<div class="input-field col s6"">
+								<input id="fname"  type="text"  required='required'  required pattern="[A-Z]*[a-z]*"></input>
+								<label for="fname" style="color:#282C35;"  class="labelfont" >First Name:<span style="color: red;"> *</span></label>
+							</div> 
+							<div class="input-field col s6">
+								<input id="lname" type="text" required pattern="[A-Z]*[a-z]*" ></input>
+								<label for="lname" style="color:#282C35;"  class="labelfont" >Last Name:<span style="color: red;"> *</span></label>
+							</div> 
+					</div>
+					
+					
+					<div class="row">
+						<div class="input-field col s6">
+							<input id="email" type="email" required style="width:100%;" ></input>
+							<label for="email" style="color:#282C35;"  class="labelfont">Email:<span style="color: red;"> *</span></label>
+						</div> 
+					</div>
+					
+				<div class="row">
+					<div class="input-field col s6">
+						<label style="color:#282C35;"  class="labelfont">Age:<span style="color: red;"> *</span></label><br><input type="number" style="width:10em;"  min="18" max="99" required /> 
+					</div> 
+				</div>
+				
+				<div class="row">
+					<div class="input-field col s6">
+						<label style="color:#282C35;"  class="labelfont" >Mobile Carriers:<span style="color: red;"> *</span></label><br>
+						<select  required>
+							<option  value="">Select Mobile carriers</option>
+							<option value = "JIO">JIO</option>
+							<option value = "IDEA">IDEA</option>
+							<option value = "VODAFONE">VODAFONE</option>
+							<option value = "AIRTEL">AIRTEL</option>
+							<option value = "BSNL">BSNL</option>
+							<option value = "Other">Other</option>
+						</select>
+					</div> 
+				</div>
+	   
+			<div class="row">
+				<div class="input-field col s6">
+					<label style="color:#282C35;"  class="labelfont" >Do you have a Motor Vehicle License? <span style="color: red;"> *</span></label><br><br>
+					<p><label>
+					<input class="with-gap"  onclick="loadData()"  name="group1"   type="radio"   id="yes" name="yes" value="yes" required  />
+					<span class="labelfont" style="color:black;">Yes</span>
+					</label></p>
+					<p><label>
+					<input class="with-gap"  name="group1"  onclick="notloadData()" type="radio"   id="no" name="no" value="no"     />
+					<span  class="labelfont"  style="color:black;">No</span>
+					</label></p>
+				</div> 
+			</div>
+	   
+	   
+		<div class="row">
+		  <div class="input-field col s6" id="lv">
+				<label  style="color:#282C35;"  class="labelfont">Type of Vehicle:<span style="color: red;"> *</span></label><br>
+				<select id="vlist">
+					<option  value = "" disabled selected >Choose any one</option>
+                     <option value = "Two">Two Wheeler</option>
+                     <option value = "Four">Four Wheeler</option>
+                     <option value = "Heavy">Heavy Vehicles</option>
+                     <option value = "Other">Other</option>
+				</select>
+			</div> 
+		</div>
+	   
+	<div class="row">
+       <div class="input-field col s6">
+        <label style="color:#282C35;"  class="labelfont">How did you find out about Us::<span style="color: red;"> *</span></label><br>
+		<select required>
+						<option  value = "" disabled selected >Choose any one</option>
+                        <option value="Search Engine">Search Engine</option>
+						<option value="Social Medias" >Social Medias</option>
+						<option value="Newspaper" >Newspaper</option>
+						<option value="TV" >TV</option>
+						<option value="Friends" >Friends</option>
+						<option value="Others">Others</option>
+              </select>
+       </div> 
+	</div>
+	   
+         
+	<div class="row" style="width:20em;">
+			<div class="input-field col s12">
+					<label style="color:#282C35;"  class="labelfont">Skills You Can Offer:</label><br>
+					<textarea id="txta1" style="width:100%;"  class="materialize-textarea"></textarea>
+			</div>
+	</div>
+	
+			
+			
+	<div class="row">
+		<div class="input-field col s12">
+			<p><label>
+				<input type="checkbox" class="filled-in checkbox-blue-grey " unchecked required />
+				<span style="color:#282C35;"  class="labelfont">Check here to indicate that you have read and agree to the<u><a href=""> Terms and Contions.</a></u></span>
+			</label></p>
+		</div>
+	</div>
+			
+			
+	<div class="row">
+		<div class="input-field col s12">
+		<center> <button class="btn waves-effect waves-light #008B8B" type="submit" onsubmit="displayMessage()">Submit</button></center>
+		</div>
+	</div>
+			
+	  
+  </div>
+  </form>
+  </div></fieldset>
+   <br><br><br><br><br>
+   </div>
+
+
+ <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>           
+ <script src= "js/materializecopy.js"></script>
+ <script src= "js/signup.js"></script>
+ <script>
+         $(document).ready(function() {
+            $('select').material_select();
+         });
+		 
+		
+</script>
+</body>
+</html>
+
+	  
+	  
